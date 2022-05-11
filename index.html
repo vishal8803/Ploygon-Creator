@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="fabric.min.js"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/01f88e3282.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="#">
+            <h1 style="font-size: 2em;" >Polygon Creator</h1>
+          </a>
+      
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" id="enalbe-disable">
+              <span class="icon">
+                <i class="fa fa-paint-brush" aria-hidden="true"></i>
+              </span>&nbsp;&nbsp;Drwaing Mode
+            </a>
+            
+      
+            <a class="navbar-item" id="deactivate">
+                <span class="icon">
+                    <i class="fa fa-hand-o-up" aria-hidden="true"></i>
+                  </span>&nbsp;&nbsp;
+               Selection Mode
+            </a>
+            <a class="navbar-item" id="addlabel">
+                <span class="icon">
+                    <i class="fa fa-font" aria-hidden="true"></i>
+                  </span>&nbsp;&nbsp;
+                
+              Add Label
+            </a>
+            <a class="navbar-item" id="deleteActiveObject">
+                <span class="icon">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                  </span>&nbsp;&nbsp;
+                
+              Delete Seleced Item 
+            </a>
+      
+            
+          </div>
+      
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-primary">
+                  <strong>Sign up</strong>
+                </a>
+                <a class="button is-light">
+                  Log in
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <canvas id="canvas"></canvas>
+    <div class="toolbar">
+        <button class="button" >Add Line</button>
+        <button class="button" >Deactivate</button>
+        <button class="button"  >Add Label </button>
+        <button class="button" >Delete Selected Object</button>
+        <!-- <button class="button" id="download">Download Cnavas</button> -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
