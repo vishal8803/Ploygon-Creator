@@ -31,13 +31,56 @@ function startDrawLine() {
 let line;
 let mouseDown = false;
 
+let blue = false;
+let green = false;
+let red = true;
+let pink = false;
+
+document.getElementById('blue').addEventListener('click',function(){
+    blue = true;
+    green = false;
+    red = false;
+    pink = false;
+})
+document.getElementById('green').addEventListener('click',function(){
+    blue = false;
+    green = true;
+    red = false;
+    pink = false;
+})
+document.getElementById('red').addEventListener('click',function(){
+    blue = false;
+    green = false;
+    red = true;
+    pink = false;
+})
+document.getElementById('pink').addEventListener('click',function(){
+    blue = false;
+    green = false;
+    red = false;
+    pink = true;
+})
+
+
 function startAddingLine(o) {
+    // console.log(o);
     let pointer = canvas.getPointer(o.e);
     mouseDown = true;
     
+    let finalColor;
+    if(blue){
+        finalColor = 'blue';
+    }else if(green){
+        finalColor = 'green';
+    }else if(red){
+        finalColor = 'red';
+    }else{
+        finalColor = 'pink';
+    }
+
     line = new fabric.Line([pointer.x, pointer.y, pointer.x, pointer.y],{
         id:'added-line',
-        stroke:'red',
+        stroke: finalColor,
         strokeWidth: 3,
         selectable: false
     });
@@ -110,3 +153,5 @@ function deleteObject() {
     canvas.requestRenderAll();
 }
 
+// change color
+// let blue = document.getElementById('blue')
